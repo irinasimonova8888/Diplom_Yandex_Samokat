@@ -1,23 +1,7 @@
 # # Diplom_Yandex_Samokat
 
 ## Вторая часть дипломного проекта курса по тестированию.
-Работа с базой данных
-## Задание 1:
-> Представь: тебе нужно проверить, отображается ли созданный заказ в базе данных.
-Для этого: выведи список логинов курьеров с количеством их заказов в статусе «В доставке» (поле inDelivery = true)
 
-SQL-запрос представлен в [файле](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/Task_1_List_of_Couriers.txt)
-
-## Задание 2:
-> Ты тестируешь статусы заказов. Нужно убедиться, что в базе данных они записываются корректно.
-Для этого: выведи все трекеры заказов и их статусы. 
-Статусы определяются по следующему правилу:
-- Если поле finished == true, то вывести статус 2.
-- Если поле canсelled == true, то вывести статус -1.
-- Если поле inDelivery == true, то вывести статус 1.
-Для остальных случаев вывести 0.
-
-SQL-запрос представлен в [файле](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/Task_2_sql) 
 
 ## Автоматизация теста к API
 > Теперь автоматизируй сценарий, который подготовили коллеги-тестировщики:
@@ -31,3 +15,33 @@ SQL-запрос представлен в [файле](https://github.com/irina
 
 Программа для тестирования представлена в файле [order_test.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/order_test.py)
 Вспомогательные функции и переменные описаны в файлах [data.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/data.py) и [configuration.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/configuration.py)
+
+
+## Структура проекта:
+
+├── configuration.py             # Базовые URL и пути API
+├── data.py                      # Тестовые данные (тела запросов, токены)
+├── sender_stand_request.py      # Функции для отправки HTTP-запросов
+├── order_test.py                # Тест создания заказа и получения заказа по номеру трэка
+
+Чтобы запустить тесты в VS Code необходимо:
+1. Подготовка окружения
+Установить: Python 3.9+, VS Code, Расширение Python в VS Code (от Microsoft)
+Установить зависимости: Открыть терминал в VS Code и выполнить команду ( pip install requests pytest)
+2. Настройка интерпретатора Python
+-Нажми Ctrl+Shift+P
+-Введи: Python: Select Interpreter
+-Выбери подходящую версию Python (например, Python 3.11)
+- Проверь, что в левом нижнем углу VS Code отображается выбранная версия.
+3. Настройка тестов
+-Открой панель Testing (значок колбы в боковой панели).
+-Если тесты не обнаружены — нажми Ctrl+Shift+P → введи:
+"Python: Configure Tests"
+3.Выбери:
+Фреймворк: pytest
+Папка с тестами: /корень
+4. Запуск тестов
+ Через панель Testing 
+В панели слева нажми на значок колбы
+Дождись, пока тесты появятся
+Нажми на кнопку ▶️ Run All Tests или отдельный тест
