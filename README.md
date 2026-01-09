@@ -14,15 +14,15 @@
 Проверить, что код ответа равен 200.
 
 Программа для тестирования представлена в файле [order_test.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/order_test.py)
-Вспомогательные функции и переменные описаны в файлах [data.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/data.py) и [configuration.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/configuration.py)
+Вспомогательные функции и переменные описаны в файлах [data.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/data.py), [configuration.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/configuration.py) и [sender_stand_request.py](https://github.com/irinasimonova8888/Diplom_Yandex_Samokat/blob/main/sender_stand_request.py)
 
 
 ## Структура проекта:
 
-├── configuration.py             # Базовые URL и пути API
-├── data.py                      # Тестовые данные (тела запросов, токены)
-├── sender_stand_request.py      # Функции для отправки HTTP-запросов
-├── order_test.py                # Тест создания заказа и получения заказа по номеру трэка
+- configuration.py             # Базовые URL и пути API
+- data.py                      # Тестовые данные (тела запросов, токены)
+- sender_stand_request.py      # Функции для отправки HTTP-запросов
+- order_test.py                # Тест создания заказа и получения заказа по номеру трэка
 
 Чтобы запустить тесты в VS Code необходимо:
 1. Подготовка окружения
